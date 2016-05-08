@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  lead_id: 
+  suscription_id: 
 
 two:
-  name: MyString
+  lead_id: 
+  suscription_id: 

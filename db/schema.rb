@@ -11,22 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160507170847) do
+ActiveRecord::Schema.define(version: 20160508232200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string   "type"
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "emails", force: :cascade do |t|
-    t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "lead_suscriptions", force: :cascade do |t|
+    t.integer  "lead_id"
+    t.integer  "suscription_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
+
+  add_index "lead_suscriptions", ["lead_id"], name: "index_lead_suscriptions_on_lead_id", using: :btree
+  add_index "lead_suscriptions", ["suscription_id"], name: "index_lead_suscriptions_on_suscription_id", using: :btree
 
   create_table "leads", force: :cascade do |t|
     t.string   "email"
@@ -43,4 +47,16 @@ ActiveRecord::Schema.define(version: 20160507170847) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "suscriptions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+  end
+
+  add_index "suscriptions", ["category_id"], name: "index_suscriptions_on_category_id", using: :btree
+
+  add_foreign_key "lead_suscriptions", "leads"
+  add_foreign_key "lead_suscriptions", "suscriptions"
+  add_foreign_key "suscriptions", "categories"
 end
