@@ -5,5 +5,15 @@
   <%= @category.name %>
 </p>
 
+<h2>New Suscription</h2>
+
+<%= render :partial => "suscriptions/form" %>
+
+<h2>Suscripciones</h2>
+
+<% @suscriptions.each do |suscription| %>
+  <p><%= suscription.name %> <%= link_to 'X', category_suscription_path(@category, suscription), method: :delete %></p>
+<% end %>
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
