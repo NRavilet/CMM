@@ -23,9 +23,7 @@
 //= require jquery.flot.pie
 //= require rickshaw
 
-
-
-//= require_tree ../../../vendor/assets/
+//= require_tree ../../../vendor/assets/.
 
 //= require turbolinks
 //= require_tree .

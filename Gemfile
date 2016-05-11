@@ -21,12 +21,12 @@ gem "d3-rails"
 gem 'chart-js-rails'
 gem 'bootstrap-datetimepicker-rails'
 gem 'toastr-rails'
-#gem 'x-editable-rails'
-#gem 'jquery-datatables-rails', '~> 3.3.0'
-#gem 'flot-rails'
-#gem 'morrisjs-rails'
-#gem 'raphael-rails'
-#gem 'rickshaw_rails'
+gem 'x-editable-rails'
+gem 'jquery-datatables-rails', '~> 3.3.0'
+gem 'flot-rails'
+gem 'morrisjs-rails'
+gem 'raphael-rails'
+gem 'rickshaw_rails'
 
 
 
