@@ -1,27 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="page-title">
+  <div class="container">
 
+<h1 id="notice"><%= notice %></h1>
+
+<div id="main-wrapper" class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-6">
+  
 <p>
   <strong>Email:</strong>
   <%= @lead.email %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @lead.name %>
 </p>
 
 <p>
-  <strong>Lastname:</strong>
+  <strong>Apellido:</strong>
   <%= @lead.lastname %>
 </p>
 
 <p>
-  <strong>Company:</strong>
+  <strong>Mercado:</strong>
   <%= @lead.company %>
 </p>
 
 <p>
-  <strong>Role:</strong>
+  <strong>Cargo:</strong>
   <%= @lead.role %>
 </p>
 
@@ -31,17 +38,17 @@
 </p>
 
 <p>
-  <strong>Industry:</strong>
+  <strong>Mercado:</strong>
   <%= @lead.industry %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>Teléfono:</strong>
   <%= @lead.phone %>
 </p>
 
 <p>
-  <strong>Module:</strong>
+  <strong>Modulo:</strong>
   <%= @lead.module %>
 </p>
 
@@ -50,5 +57,20 @@
   <%= @lead.status %>
 </p>
 
-<%= link_to 'Edit', edit_lead_path(@lead) %> |
-<%= link_to 'Back', leads_path %>
+<p>
+  <strong>Tipo de email:</strong>
+  <%= @category.name %>
+</p>
+
+
+<button type="button" class="btn btn-default">
+<%= link_to 'Editar', edit_lead_path(@lead) %></button>
+
+<button type="button" class="btn btn-success">
+<%= link_to 'Volver', leads_path %></button>
+
+</div>
+</div>
+</div>
+</div>
+

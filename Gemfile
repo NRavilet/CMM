@@ -14,6 +14,23 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'ahoy_email'
 gem 'devise'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem "font-awesome-rails"
+gem 'simple-line-icons-rails'
+gem "d3-rails"
+gem 'chart-js-rails'
+gem 'bootstrap-datetimepicker-rails'
+gem 'toastr-rails'
+gem 'x-editable-rails'
+gem 'jquery-datatables-rails', '~> 3.3.0'
+gem 'flot-rails'
+#gem 'morrisjs-rails'
+#gem 'raphael-rails'
+gem 'rickshaw_rails'
+
+
+
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -25,6 +42,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bootstrap-colorpicker-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

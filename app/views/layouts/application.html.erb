@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- Title -->
   <title>CMM</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="UTF-8">
+
+  <!-- Styles
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+  <link href="vendor/assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
+  <link href="vendor/assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
+  <link href="vendor/assets/plugins/waves/waves.min.css" rel="stylesheet" type="text/css"/>  
+  <link href="vendor/assets/plugins/switchery/switchery.min.css" rel="stylesheet" type="text/css"/>
+  <link href="vendor/assets/plugins/3d-bold-navigation/css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="vendor/assets/plugins/slidepushmenus/css/component.css" rel="stylesheet" type="text/css"/> 
+  <link href="vendor/assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet" type="text/css"/> 
+  <link href="vendor/assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet" type="text/css"/>  
+  <link href="vendor/assets/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css"/>
+  <!-*- Theme Styles --*>
+  <script src="vendor/assets/plugins/3d-bold-navigation/js/modernizr.js"></script> -->
+
 </head>
-<body>
 
-<%= yield %>
+<body class="page-header-fixed compact-menu page-horizontal-bar">
+  <div class="overlay"></div>
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s1">
+    <div class="page-sidebar sidebar horizontal-bar">
+      <div class="page-sidebar-inner">
+        <ul class="menu accordion-menu">
+          <li class="nav-heading"><span>Navigation</span></li>
+          <li class="active"><a href="index.html"><span class="menu-icon icon-speedometer"></span><p>Resumen</p></a></li>
+          <li class="droplink"><a href="#"><span class="menu-icon icon-layers"></span><p>Funnel</p><span class="arrow"></span></a>
+          </li>
+          <li class="droplink"><a href="#"><span class="menu-icon icon-grid"></span><p>BBDD</p><span class="arrow"></span></a>
+            <li class="droplink"><a href="#"><span class="menu-icon icon-user"></span><p>Login</p><span class="arrow"></span></a>
+            </li>
+          </ul>
+        </div><!-- Page Sidebar Inner -->
+      </div>
+    </nav>
 
-</body>
-</html>
+    <div class="cd-overlay"></div>
+    <div id="main-wrapper" class="container">
+
+      <%= yield %>
+
+
+      <!-- Javascripts -->
+      <script src="admin-js/modern.min"></script>
+      <script src="vendor/assets/js/pages/dashboard.js"></script>
+
+    </div>
+  </body>
+  </html>
+
+
+
+

@@ -1,2 +1,23 @@
 FATAL:  lock file "postmaster.pid" already exists
 HINT:  Is another postmaster (PID 1799) running in data directory "/usr/local/var/postgres"?
+LOG:  database system was shut down at 2016-05-09 02:09:41 CLT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+LOG:  database system was interrupted; last known up at 2016-05-10 00:58:56 CLT
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  invalid record length at 0/1CF0B10
+LOG:  redo is not required
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+ERROR:  column categories.lead_id does not exist at character 47
+STATEMENT:  SELECT "categories".* FROM "categories" WHERE "categories"."lead_id" = $1
+ERROR:  column categories.lead_id does not exist at character 47
+STATEMENT:  SELECT "categories".* FROM "categories" WHERE "categories"."lead_id" = $1
+FATAL:  database "Geo_development" does not exist
+LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down

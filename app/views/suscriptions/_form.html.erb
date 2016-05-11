@@ -1,21 +1,35 @@
 <%= form_for([@category, @suscription]) do |f| %>
-  <% if @suscription.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@suscription.errors.count, "error") %> prohibited this suscription from being saved:</h2>
+<% if @suscription.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@suscription.errors.count, "error") %> prohibited this suscription from being saved:</h2>
 
-      <ul>
-      <% @suscription.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <ul>
+    <% @suscription.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div id="main-wrapper" class="container">
+ <div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-white">
+      <div class="panel-body">
+        <form>
+          <div class="form-group">
+
+            <div class="field">
+              <%= f.label :name %><br>
+              <%= f.text_field :name %>
+            </div>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+</div>
 <% end %>

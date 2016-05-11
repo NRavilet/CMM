@@ -1,6 +1,14 @@
-<h1>Editing Lead</h1>
+<div class="page-title">
+<div class="container">
+<h1>Editar Lead</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @lead %> |
-<%= link_to 'Back', leads_path %>
+<button type="button" class="btn btn-default">
+<%= link_to 'Ver', @lead %></button>
+
+<button type="button" class="btn btn-success">
+<%= link_to 'Volver', leads_path %></button>
+
+</div>
+</div>

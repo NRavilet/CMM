@@ -5,11 +5,14 @@ class LeadsController < ApplicationController
   # GET /leads.json
   def index
     @leads = Lead.all
+    @categories = Category.all
   end
 
   # GET /leads/1
   # GET /leads/1.json
   def show
+    @category = Category.new
+    @categories = @lead.categories
   end
 
   # GET /leads/new
@@ -69,6 +72,6 @@ class LeadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
-      params.require(:lead).permit(:email, :name, :lastname, :company, :role, :area, :industry, :phone, :module, :status)
+      params.require(:lead).permit(:email, :name, :lastname, :company, :role, :area, :industry, :phone, :module, :status, :category)
     end
 end

@@ -12,5 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require d3
+//= require Chart
+//= require bootstrap-datetimepicker
+//= require bootstrap-colorpicker
+//= require toastr
+//= require jquery
+//= require jquery.flot
+//= require jquery.flot.pie
+//= require rickshaw
+
+
+
+//= require_tree ../../../vendor/assets/
+
 //= require turbolinks
 //= require_tree .

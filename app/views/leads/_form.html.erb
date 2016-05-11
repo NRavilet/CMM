@@ -1,57 +1,79 @@
 <%= form_for(@lead) do |f| %>
-  <% if @lead.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+<% if @lead.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
 
-      <ul>
-      <% @lead.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <ul>
+    <% @lead.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div id="main-wrapper" class="container">
+ <div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-white">
+      <div class="panel-body">
+        <form>
+          <div class="form-group">
+
+            <div class="field">
+              <%= f.label :email %><br>
+              <%= f.text_field :email %>
+            </div>
+            <div class="field">
+              <%= f.label :nombre %><br>
+              <%= f.text_field :name %>
+            </div>
+            <div class="field">
+              <%= f.label :apellido %><br>
+              <%= f.text_field :lastname %>
+            </div>
+            <div class="field">
+              <%= f.label :empresa %><br>
+              <%= f.text_field :company %>
+            </div>
+            <div class="field">
+              <%= f.label :cargo %><br>
+              <%= f.text_field :role %>
+            </div>
+            <div class="field">
+              <%= f.label :area %><br>
+              <%= f.text_field :area %>
+            </div>
+            <div class="field">
+              <%= f.label :mercado %><br>
+              <%= f.text_field :industry %>
+            </div>
+            <div class="field">
+              <%= f.label :teléfono %><br>
+              <%= f.number_field :phone %>
+            </div>
+            <div class="field">
+              <%= f.label :modulo %><br>
+              <%= f.text_field :module %>
+            </div>
+            <div class="field">
+              <%= f.label :status %><br>
+              <%= f.text_field :status %>
+            </div>
+            <div class="field">
+              <%= f.label :tipo_de_email %><br>
+              <%#= text_field :category, :name %> 
+              <%= f.select :categories, Category.all.map{|categories| [categories.name]}, {multiple: true} %>
+
+
+            </div>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :lastname %><br>
-    <%= f.text_field :lastname %>
-  </div>
-  <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
-  </div>
-  <div class="field">
-    <%= f.label :role %><br>
-    <%= f.text_field :role %>
-  </div>
-  <div class="field">
-    <%= f.label :area %><br>
-    <%= f.text_field :area %>
-  </div>
-  <div class="field">
-    <%= f.label :industry %><br>
-    <%= f.text_field :industry %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.number_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :module %><br>
-    <%= f.text_field :module %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+</div>
 <% end %>
