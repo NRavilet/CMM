@@ -18,9 +18,21 @@
 
 
 
+
+
 @import "bootstrap";
 @import "font-awesome";
-@import "admin/custom";
-@import "admin/modern";
-@import "admin/modern.min";
 @import "editable/bootstrap-editable";
+
+@import "component";
+@import "custom";
+@import "MetroJs";
+@import "modern";
+@import "pace-theme-flash";
+@import "simple-line-icons";
+@import "style";
+@import "switchery";
+@import "toastr";
+@import "uniform.default";
+@import "waves";
+@import "weather-icons";

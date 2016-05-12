@@ -23,7 +23,29 @@
 //= require jquery.flot.pie
 //= require rickshaw
 
-//= require_tree ../../../vendor/assets/.
+
+//= require jquery-ui.min
+//= require pace.min
+//= require jquery.blockui
+//= require jquery.slimscroll.min
+//= require switchery.min
+//= require jquery.uniform.min
+//= require classie
+//= require waves.min
+//= require main
+//= require jquery.waypoints.min
+//= require jquery.counterup.min
+//= require toastr.min
+//= require jquery.flot.min
+//= require jquery.flot.time.min
+//= require jquery.flot.symbol.min
+//= require jquery.flot.resize.min
+//= require jquery.flot.tooltip.min
+//= require curvedLines
+//= require MetroJs.min
+//= require modern.min
+//= require dashboard
+
 
 //= require turbolinks
 //= require_tree .
